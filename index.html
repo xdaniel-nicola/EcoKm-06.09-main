@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Calculadora de Gasto de Combustível</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cima">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planos/planos.html">Planos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <div class="actions">
+                <div class="login-area">
+                    <form id="login-form">
+                        <a href="login/login.html" type="button">Login</a>
+                    </form>
+                    <div id="usuario-logado"></div>
+                </div>
+                <!-- Botão de alternância de tema -->
+                <div class="theme-toggle">
+                    <input type="checkbox" id="toggle-switch" class="toggle-switch">
+                    <label for="toggle-switch" class="toggle-label">
+                        <span class="toggle-slider"></span>
+                        <span class="icon-sun">🌜</span>
+                        <span class="icon-moon">🌞</span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Calculadora de Gasto de Combustível</h1>
+            <form class="card" id="form-carro">
+                <label for="modelo-carro">Modelo do Motor:</label>
+                <select class="selecao" id="modelo-carro"></select>
+
+                <label for="tipo-combustivel">Tipo de Combustível:</label>
+                <select class="selecao" id="tipo-combustivel">
+                    <option value="10">Gasolina</option>
+                    <option value="8">Etanol</option>
+                    <option value="15">GNV</option>
+                </select>
+
+                <label for="distancia">Distância (em km):</label>
+                <input class="selecao" type="number" id="distancia" required>
+
+                <label for="preco-combustivel">Preço do Combustível (R$):</label>
+                <input class="selecao" type="number" id="preco-combustivel" step="0.01" required>
+
+                <button type="button" onclick="calcularCombustivel()">Calcular</button>
+            </form>
+            <div id="resultado"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
