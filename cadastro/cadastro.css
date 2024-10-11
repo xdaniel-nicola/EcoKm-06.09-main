@@ -12,7 +12,14 @@ body {
 }
 body.light {
     background-color: #f0f0f0; /* Cor de fundo para tema claro */
+    
 }
+
+body.light-mode .form.card {
+    background-color: #dbdbdb; 
+    color: #000000; 
+}
+
 
 .topoPag {
     text-align: center;
@@ -30,7 +37,7 @@ body.light {
 .voltarLogin {
     text-decoration: dotted;
     font-weight: bold;
-    color: #ffb84d;
+    color: #ff0000;
 }
 
 /* Comando site */
@@ -42,7 +49,7 @@ body.light {
 }
 
 .card {
-    background-color: #333;
+  
     padding: 20px;
     border-radius: 50px;
     width: 650px;
@@ -58,6 +65,7 @@ body.light {
 }
 
 #titulo {
+    color: #ff0000;
     font-size: 40px;
 }
 
@@ -95,7 +103,7 @@ body.light {
     outline: none;
     font-size: 14px;
     display: flex;
-    color: white;
+    color: #ffffff;
 }
 
 button {
@@ -128,34 +136,33 @@ button {
     margin-left: 170px;
     width: 300px;
     height: 40px;
-    background-color: transparent;
-    border: solid 1px #ffb84d;
+    background-color: #ff0000;
+   
     color: #e1e1e1;
     text-align: center;
     cursor: pointer;
     position: static;
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    
 }
 
 #enviar:hover {
-    background-color: #ffb84d;
+    background-color: #b30000;
 }
 
 .limpar {
     margin-top: 30px;
     width: 210px;
     height: 35px;
-    background-color: transparent;
-    border: solid 1px #ffb84d;
+    background-color: #ff0000;
     color: #e1e1e1;
     text-align: center;
     cursor: pointer;
     position: sticky;
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    
 }
 
 .limpar:hover {
-    background-color: #ffb84d;
+    background-color: #b30000;
 }
 
 .sexos {
@@ -164,8 +171,8 @@ button {
     height: 35px;
     margin-top: 10px;
     padding: 0 5px;
-    background-color: rgb(226, 220, 220);
-    border-radius: 5px;
+    background-color:#272525;
+    color: #919090;
     outline: none;
     font-size: 14px;
     display: flex;
@@ -173,7 +180,7 @@ button {
 }
 
 #sexos:focus {
-    background-color: #ffb84d;
+    background-color: #ff0000;
 }
 
 /* Comando site */
@@ -182,14 +189,20 @@ button {
     text-decoration: none; 
     font-size: 14px;   
 }
+.homePage:hover{
+    background-color: #b30000;
+}
 
 .homePage {
     text-align: center;
     width: 50px;
     height: 20px;
-    background-color: #ffb84d;
+    background-color: #ff0000;
     border-radius: 3px;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+}
+.homePage:hover{
+    background-color: #b30000;
 }
 
 input {
@@ -207,14 +220,6 @@ form {
     padding: 10px;
     box-shadow: 0px 10px 8px #0e0d0d;
     border-radius: 100px;
-}
-
-.estadoSP {
-    display: none;
-}
-
-.estadoRJ {
-    display: none;
 }
 
 .span-required {
