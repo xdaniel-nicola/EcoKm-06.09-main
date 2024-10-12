@@ -6,18 +6,18 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #222020;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: none;
     background-attachment: fixed;
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
     transition: background-color 0.5s;
 }
 
 header {
-    background-color: #808080; 
+    background-color: #ffffff; 
     padding: 16px 0;
     position: fixed;
     width: 100%;
@@ -29,10 +29,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%; /* Altera para 100% */
+    margin: 0;
+    padding: 4px;
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
 }
+
 
 .menu ul {
     list-style: none;
@@ -44,14 +46,23 @@ header {
 }
 
 .menu ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
 }
 
 .menu ul li a:hover {
-    color: #ffb84d;
+    color: #ff0000;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
 }
 
 .actions {
@@ -66,8 +77,8 @@ header {
 }
 
 .login-area a {
-    background-color: #fff;
-    color: #285a2a;
+    background-color: #ff0000;
+    color: #ffffff;
     border: none;
     padding: 8px 16px;
     font-size: 16px;
@@ -77,7 +88,7 @@ header {
 }
 
 .login-area a:hover {
-    background-color: #693c3c;
+    background-color: #b30000;
 }
 
 #usuario-logado {
@@ -87,596 +98,55 @@ header {
 }
 
 .container {
-    display: flex;
     background-color: #333;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 200px;
+    width: 400px;
     margin: 100px auto 80px auto; /* Ajustado para compensar o header fixo */
 }
-/* primeira caixa de texto */
-.containerTexto1{
-    margin-top: 100px;
-    width: 60vw;
-    background-color: #333;
-    display: block;
-    justify-content: left;
-    overflow-wrap: break-word;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    margin-left: 10px
-}
-.containerTexto1 h2{
-    font-size: 30px;
-    font-weight: bold;
-    color:white;
-}
 
-.containerTexto1 li {
-    margin-left: 20px;
-}
-.containerTexto1 p {
-    font-size: 20px;
-    font-weight: bold;
-    overflow-wrap: break-word;
-}
-/* segunda caixa de texto */
-.containerTexto2{
-    margin-top: 100px;
-    width: 60vw;
-    background-color: #333;
-    display: block;
-    justify-content: left;
-    overflow-wrap: break-word;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    margin-left: 10px;
-    text-align: left;
-}
-.containerTexto2 h2{
-    font-size: 30px;
-    font-weight: bold;
-    color:white;
-}
-.containerTexto2 p{
-    font-size: 20px;
-    font-weight: bold;
-    overflow-wrap: break-word;
-}
-/* terceira caixa de texto */
-.containerTexto3{
-    margin-top: 100px;
-    width: 60vw;
-    background-color: #333;
-    display: block;
-    justify-content: left;
-    overflow-wrap: break-word;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    margin-left: 10px
-}
-.containerTexto3 h2{
-    font-size: 30px;
-    font-weight: bold;
-    color:white;
-}
-
-.containerTexto3 li {
-    margin-left: 20px;
-}
-/* quarta caixa de texto */
-.containerTexto4{
-    margin-top: 100px;
-    width: 60vw;
-    background-color: #333;
-    display: block;
-    justify-content: left;
-    overflow-wrap: break-word;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    margin-left: 10px
-}
-.containerTexto4 h2{
-    font-size: 30px;
-    font-weight: bold;
-    color:white;
-}
-
-.containerTexto4 li {
-    margin-left: 20px;
-}
-
-.card{
-    width: 300px;
-    display:flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-#resultado {
-    margin-top: 100px !important; 
-    font-size: 25px !important;
-    color: #ffb84d; 
+h1 {
+    color: #ff0000;
     text-align: center;
+    padding-bottom: 15px;
+    font-weight: bold;
+    
 }
 
-label {
-    font-size: 17px;
-    display: flex;
-    font-weight: bold;
-    color: black;
-}
+
 
 input, select {
-    width: 200px;
+    width: 90%;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid #000000;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 45%; 
-    min-width: 200px;
-}
-
 button {
-    width: 100px;
+    width: 100%;
     padding: 10px;
-    background-color: #ffb84d;
-    color: #333;
+    background-color: #ff0000;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 40px;
 }
 
 button:hover {
-    background-color: #c18a38;
+    background-color: #b30000;
 }
 
 #resultado {
     margin-top: 20px;
     text-align: center;
     font-size: 18px;
-    color: #ffb84d;
-    background-color: black;
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        height: 100vh;
-        background-color: rgb(237, 143, 143);
-        background-size: cover;
-        background-position: center;
-    }
-    
-    li {
-        list-style: none;
-    }
-    
-    a {
-        text-decoration: none;
-        position: relative;
-        color: #fff;
-        font-size: 1rem;
-    }
-    
-    a:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #be0209;
-        visibility: hidden;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
-        transition: all 0.3s ease-in-out 0s;
-      }
-      
-      a:hover:before {
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-      }
-    
-    
-    /* HEADER */
-    header {
-        position: relative;
-        padding: 0 2rem;
-        /* background-color: #4d4d4d; */
-    }
-    
-    .navbar {
-        width: 100%;
-        height: 80px;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    .navbar .links {
-        display: flex;
-        gap: 2rem;
-    }
-    
-    .navbar .toggle-btn {
-        color: #fff;
-        font-size: 1.5rem;
-        cursor: pointer;
-        display: none;
-    }
-     
-    .action-btn{
-        background-color:#be0209;
-        color: #fff;
-        padding: 0.5rem 1rem;
-        border: none;
-        outline: none;
-        border-radius: 5px;
-        font-size: 0.8rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: scale 0.2 ease;
-    }
-    
-    .action-btn:hover {
-        scale: 1.05;
-        color: #fff;
-    }
-    
-    .action-btn:active {
-        scale: 0.95;
-    }
-    /* MAIN */
-    .container {
-        background-color: #333;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 400px;
-        margin: 100px auto 80px auto; /* Ajustado para compensar o header fixo */
-    }
-    
-    h1 {
-        color: #ffb84d;
-        text-align: center;
-        padding-bottom: 15px;
-        font-weight: bold;
-    }
-    
-    label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        color: rgb(255, 255, 255);
-    }
-    
-    input, select {
-        width: 90%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        border: 1px solid #fdfdfd;
-    }
-    
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: #ffb84d;
-        color: #553a3a;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    
-    button:hover {
-        background-color: #c18a38;
-    }
-    
-    #resultado {
-        margin-top: 20px;
-        text-align: center;
-        font-size: 18px;
-        color: #ffb84d;
-    }
-    
-    /* primeira caixa de texto */
-    .containerTexto1{
-        margin-top: 100px;
-        width: 60vw;
-        background-color: #333;
-        display: block;
-        justify-content: left;
-        overflow-wrap: break-word;
-        border: none;
-        padding: 15px;
-        border-radius: 10px;
-        margin-left: 10px
-    }
-    .containerTexto1 h2{
-        font-size: 30px;
-        font-weight: bold;
-        color:white;
-    }
-    
-    .containerTexto1 li {
-        margin-left: 20px;
-    }
-    .containerTexto1 p {
-        font-size: 20px;
-        font-weight: bold;
-        overflow-wrap: break-word;
-    }
-    /* segunda caixa de texto */
-    .containerTexto2{
-        margin-top: 100px;
-        width: 60vw;
-        background-color: #333;
-        display: block;
-        justify-content: left;
-        overflow-wrap: break-word;
-        border: none;
-        padding: 15px;
-        border-radius: 10px;
-        margin-left: 10px;
-        text-align: left;
-    }
-    .containerTexto2 h2{
-        font-size: 30px;
-        font-weight: bold;
-        color:white;
-    }
-    .containerTexto2 p{
-        font-size: 20px;
-        font-weight: bold;
-        overflow-wrap: break-word;
-    }
-    /* terceira caixa de texto */
-    .containerTexto3{
-        margin-top: 100px;
-        width: 60vw;
-        background-color: #333;
-        display: block;
-        justify-content: left;
-        overflow-wrap: break-word;
-        border: none;
-        padding: 15px;
-        border-radius: 10px;
-        margin-left: 10px
-    }
-    .containerTexto3 h2{
-        font-size: 30px;
-        font-weight: bold;
-        color:white;
-    }
-    
-    .containerTexto3 li {
-        margin-left: 20px;
-    }
-    /* quarta caixa de texto */
-    .containerTexto4{
-        margin-top: 100px;
-        width: 60vw;
-        background-color: #333;
-        display: block;
-        justify-content: left;
-        overflow-wrap: break-word;
-        border: none;
-        padding: 15px;
-        border-radius: 10px;
-        margin-left: 10px
-    }
-    .containerTexto4 h2{
-        font-size: 30px;
-        font-weight: bold;
-        color:white;
-    }
-    
-    .containerTexto4 li {
-        margin-left: 20px;
-    }
-    
-    /* FOOTER */
-    footer{
-        background-color: #333;
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        padding-top: 15px;
-        margin-top: 15px;
-        padding-bottom: 15px;
-    }
-    
-    .footerContato{
-        margin-top: 10px;
-        width: 30vw;
-        background-color: #202020;
-        display: grid;
-        grid-template-columns: auto auto ;
-        overflow-wrap: break-word;
-        padding: 15px;
-        border-radius: 10px;
-        margin-left: 10px;
-        padding-left: 15px; 
-    }
-    .footerSobreNos{
-        margin-top: 10px;
-        width: 50vw;
-        background-color: #202020;
-        display: block;
-        overflow-wrap: break-word;
-        padding: 15px;
-        border-radius: 10px;
-        margin-left: 10px;
-        padding-left: 15px; 
-    }
-    .textoFooter{
-        margin-right: -80px;
-    }
-    
-    /* Tema escuro */
-    body.dark-mode {
-        background-color: #222020;
-        color: rgb(255, 255, 255);
-    }
-    
-    body.dark-mode .container .card {
-        background-color: #3b3838;
-        color: #ffb84d;
-        border: none;
-    }
-    
-    h1.dark-mode {
-        color: #ffb84d;
-    }
-    
-    /* Tema claro */
-    body.light-mode {
-        background-color: #f4f4f4;
-        color: #333;
-    }
-    
-    body.light-mode .container {
-        background-color: #919090; 
-        border: none;
-    }
-    
-    body.light-mode .card{
-        background-color: #919090; 
-        border: none;
-    }
-    
-    body.light-mode h1 {
-        color: #ffb84d;
-    }
-    
-    /* Estilo do botão de alternância de tema */
-    .theme-toggle {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .toggle-switch {
-        display: none;
-    }
-    
-    .toggle-label {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        position: relative;
-        width: 60px;
-        height: 30px;
-        background-color: #ccc;
-        border-radius: 15px;
-        transition: background-color 0.3s ease;
-    }
-    
-    .toggle-slider {
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 24px;
-        height: 24px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-    }
-    
-    .icon-sun, .icon-moon {
-        position: absolute;
-        font-size: 20px;
-    }
-    
-    .icon-sun {
-        left: 5px;
-    }
-    
-    .icon-moon {
-        right: 5px;
-        display: none;
-    }
-    
-    .toggle-switch:checked + .toggle-label {
-        background-color: #4d4d4d;
-    }
-    
-    .toggle-switch:checked + .toggle-label .toggle-slider {
-        transform: translateX(30px);
-    }
-    
-    .toggle-switch:checked + .toggle-label .icon-sun {
-        display: none;
-    }
-    
-    .toggle-switch:checked + .toggle-label .icon-moon {
-        display: block;
-    }
-    
-    @media screen and (max-width: 610px) {
-        body{
-            font-family: Arial, sans-serif;
-            background-image: none;
-            background-attachment: fixed;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-        }
-        h1{
-            font-size: 30px;
-        }
-        .container{
-            display: block;
-            width: 300px;
-        }
-        #form-carro .selecao {
-            display: block;
-            font-size: 15px;
-            margin-left: 40px;
-        }
-        label {
-            margin-left: 30px;
-        }
-        .selecao{
-            width: 180px;
-        }
-        button {
-            margin-left: 7vw;
-            width: 210px;
-        }
-        .theme-toggle{
-            position: relative;
-        }
-        a{
-            position: relative;
-        }
-        a .botaoLogin{
-            margin-left: 1000px;        
-        }
-    }
-    
+    color: #ff0000;
+}
+
+
 /* Tema escuro */
 body.dark-mode {
     background-color: #222020;
@@ -685,35 +155,49 @@ body.dark-mode {
 
 body.dark-mode .container,.card {
     background-color: #333;
-    color: #ffb84d;
+    color: #ffffff;
     border: none;
 }
-
-h1.dark-mode {
-    color: #ffb84d;
+body.dark-mode .card{
+    background-color: #333;
+    color: #ffffff; 
+    border: none;
 }
+body.dark-mode .menu{
+    background-color: #222222;
+}
+body.dark-mode .cima{
+    background: #222222;
+}
+body.dark-mode .letramenu{
+    color: #fff;
+}
+
+
 
 /* Tema claro */
 body.light-mode {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #eeeeee;
+    
 }
 
-body.light-mode .container {
-    background-color: #919090; 
+body.light-mode .container,.card {
+    background-color: #dbdbdb;
+    color: #000000; 
     border: none;
 }
 
 body.light-mode .card{
-    background-color: #919090; 
+    background-color: #dbdbdb; 
     border: none;
 }
 
-body.light-mode h1 {
-    color: #ffb84d;
+
+body.light-mode .label{
+    background-color: #000000;
 }
-body.dark-mode .letraMenu:hover{
-    color: red;
+body.light-mode .menu{
+    background-color: #ffffff;
 }
 
 /* Estilo do botão de alternância de tema */
@@ -781,65 +265,10 @@ body.dark-mode .letraMenu:hover{
     display: block;
 }
 
-/* Responsividade */
-/* @media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 15px;
-        margin: 100px auto 20px auto; 
-    }
-}
-
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 610px) {
     body{
         font-family: Arial, sans-serif;
-        background-color: #222020;
-        background-attachment: fixed;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-        padding: 0;
-    }
-    h1{
-        font-size: 30px;
-    }
-    .container{
-        display: block;
-        width: 300px;
-        margin: 100px auto 20px auto; 
-    }
-    #form-carro .selecao {
-        display: block;
-        font-size: 15px;
-        margin-left: 40px;
-    }
-    label {
-        margin-left: 30px;
-    }
-    .selecao{
-        width: 180px;
-    }
-    button {
-        margin-left: 7vw;
-        width: 210px;
-    }
-    .menu ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .actions {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    .login-area {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-} */
-@media screen and (max-width: 425px) {
-    body{
-        font-family: Arial, sans-serif;
+        background-image: none;
         background-attachment: fixed;
         background-position: center center;
         background-repeat: no-repeat;
@@ -868,5 +297,14 @@ body.dark-mode .letraMenu:hover{
     button {
         margin-left: 7vw;
         width: 210px;
+    }
+    .theme-toggle{
+        position: relative;
+    }
+    a{
+        position: relative;
+    }
+    a .botaoLogin{
+        margin-left: 1000px;        
     }
 }
